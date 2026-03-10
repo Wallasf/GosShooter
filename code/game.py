@@ -1,9 +1,20 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
+import pygame
+
 
 class Game:
     def __init__(self):
-        self.window = None
+        pygame.init()
+        window = pygame.display.set_mode(size=(600, 480))
 
     def run(self, ):
-        pass
+        while true:
+            # check for all events
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:  # close window
+                    pygame.quit()
+                    quit()  # end pygame
+
+
+from pygame.examples.go_over_there import screen
